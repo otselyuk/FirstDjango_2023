@@ -30,14 +30,18 @@ def home(request):
 
 
 def about(request):
-    result = f"""
-    Имя: <b>{author['name']}</b><br>
-    Отчество: <b>{author['middle']}</b><br>
-    Фамилия: <b>{author['surname']}</b><br>
-    Телефон: <b>{author['phone']}</b><br>
-    email: <b>{author['email']}</b><br>
-    """
-    return HttpResponse(result)
+    # result = f"""
+    # Имя: <b>{author['name']}</b><br>
+    # Отчество: <b>{author['middle']}</b><br>
+    # Фамилия: <b>{author['surname']}</b><br>
+    # Телефон: <b>{author['phone']}</b><br>
+    # email: <b>{author['email']}</b><br>
+    # <a href='/'> Назад </a>
+    # """
+    context = {
+        "author" : author
+    }
+    return render(request, "about.html", context)
 
 #url /item/1
 #url /item/2

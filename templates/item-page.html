@@ -5,8 +5,13 @@
     <title>Item page</title>
 </head>
 <body>
+    <header>
+        / <a href="/"> home </a> / <a href="/items"> items </a>
+    </header>
     <h2> Наименование товара: <br> <i> {{ item.name }} </i> </h2> <br>
-    <div> Колличество товара: <i> {{ item.quantity }} </i> </div>
+    
+    <div> Колличество товара: <i> {{ item.quantity| default:"Товара нет на складе" }} </i> </div>
+    
     <a href = '/items'> Назад </a>
 </body>
 </html>
