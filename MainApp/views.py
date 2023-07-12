@@ -22,9 +22,10 @@ items = [
 
 # Create your views here.
 def home(request):
-    text = """<h1>"Изучаем django"</h1>
-        <strong>Автор</strong>: <i>Оцелюк В.В.</i>"""
-    return HttpResponse(text)
+    # text = """<h1>"Изучаем django"</h1>
+    #     <strong>Автор</strong>: <i>Оцелюк В.В.</i>"""
+    # return HttpResponse(text)
+    return render(request, "index.html")
 
 def about(request):
     result = f"""
