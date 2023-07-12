@@ -52,6 +52,6 @@ def get_item(request, id):
 def items_list(request):
     result = "<h2>Список товаров</h2><ol>"
     for item in items:
-        result += f"<li>{item['name']}<li>"
+        result += f"<li>{item['name']}</li>"
     result += '<ol>'
     return HttpResponse(result)
