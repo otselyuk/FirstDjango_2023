@@ -10,7 +10,7 @@
     </header>
     <h2> Наименование товара: <br> <i> {{ item.name }} </i> </h2> <br>
     
-    <div> Колличество товара: <i> {{ item.quantity| default:"Товара нет на складе" }} </i> </div>
+    <div> Колличество товара: <i> {{ item.count| default:"Товара нет на складе" }} </i> </div>
     
     <a href = '/items'> Назад </a>
 </body>
