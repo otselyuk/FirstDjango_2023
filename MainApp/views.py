@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render
 from MainApp.models import Item
+from django.core.exceptions import ObjectDoesNotExist
 
 
 
@@ -28,7 +29,10 @@ def about(request):
 
 
 def get_item(request, id):
-    item = Item.objects.get(id=id)
+    try:
+        item = Item.objects.get(id=id)
+    except ObjectDoesNotExist:
+        return HttpResponseNotFound(f'Item with id={id} not found')
     context = {
             'item' : item}
     return render(request, 'item-page.html', context)
