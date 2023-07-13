@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start page</title>
-</head>
-<body>
-    <header>
-        / <a href="/"> home </a> / <a href="/items"> items </a> / <a href="/about"> about </a>
-    </header>
+{% extends 'base.html' %}
 
-    <h1>Welcome to home page</h1>
-    <p><span style="text-decoration: underline;">Это главная страница сайта</span></p>
+{% block content %}
+<h1 class="demo">Welcome to home page</h1>
     
-    Меня зовут: <i>{{ name }}.</i> <br>
-    E-mail для связи: <i>{{ email }}.</i> 
+<p><span style="text-decoration: underline;">Это главная страница сайта</span></p>
+    
+<span style="color: rgba(255, 0, 106, 0.699)">Меня зовут: <i>{{ name }}.</i> </span> <br>
+E-mail для связи: <i>{{ email }}.</i> 
 
-
-    <p><em>Сайт находится в разработке</em></p>
-</body>
-</html>
+<p><em>Сайт находится в разработке</em></p>
+{% endblock %}
