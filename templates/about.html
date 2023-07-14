@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        / <a href="/"> home </a>
-    </header>
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'inc-menu.html' %}
 
     <h1>Справка</h1>
 
@@ -17,5 +11,4 @@
     Телефон: <b>{{ author.phone }}</b><br>
     email: <b>{{ author.email }}</b><br>
 
-</body>
-</html>
+{% endblock %}
